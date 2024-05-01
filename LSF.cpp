@@ -149,8 +149,8 @@ int main() {
 		}
 		//cout<<min_value<<endl;
 		
-		for(int n=0; n<N; n++){
-			if(jobs[n].getCount() > 0 && LSF[n]==0){
+		for(int n=0; n<N; n++){//Se passou do deadline e ainda n terminou de executar o Time Computing
+			if(jobs[n].getCount() > 0 && LSF[n]<=0){
 				min_value = 1;
 				p=n;
 				break;
